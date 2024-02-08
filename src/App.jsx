@@ -1,8 +1,12 @@
 import React from 'react'
+import Home from './pages/Home'
+import { ChakraProvider } from '@chakra-ui/react'
 
 const App = () => {
   return (
-    <div className='text-red-600'>hello</div>
+    <ChakraProvider>
+      <Home/>
+    </ChakraProvider>
   )
 }
 
