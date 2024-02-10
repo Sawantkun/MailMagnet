@@ -18,7 +18,7 @@ const Home = () => {
       <p className={`text-center text-2xl text-gray-600 max-w-2xl mx-auto font-normal py-[40px] ${isDarkMode ? ' text-slate-400' : ' text-gray-600'}`}>Effortless Email Integration: Seamlessly Send and Receive mails with MailMagnet. Elevate your messaging experience for unparalleled communication efficiency.</p>
       <img className='w-[300px] mx-auto my-7' src={Hero} alt="Hero Image" />
       </div>
-      <Faqs/>
+      <Faqs isDarkMode={isDarkMode}/>
     </div>
 
 

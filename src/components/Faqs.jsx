@@ -1,9 +1,17 @@
 import React from 'react';
 import { Box, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon } from '@chakra-ui/react';
+import { useColorMode } from '@chakra-ui/react';
 
-const Faqs = () => {
+const Faqs = ({ isDarkMode, onSwitchChange }) => {
+  const { toggleColorMode } = useColorMode();
+
+  const handleSwitchChange = () => {
+    onSwitchChange();
+    toggleColorMode();
+  };
   return (
-    <div className='w-3/5 mx-auto mt-10 h-4/5 '>
+   <div className={`${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
+     <div className='w-3/5 mx-auto h-4/5 '>
       <p className='text-base mb-4 text-center text-cyan-500 pb-5'>Navigate with Ease, Explore with Confidence: Your FAQs, Unveiled.</p>
       <h1 className='text-6xl font-bold mb-4 text-center text-gray-800 pb-20'>FAQ's</h1>
     <div className='pb-20'>
@@ -105,6 +113,7 @@ const Faqs = () => {
 </div>
 
     </div>
+   </div>
   );
 };
 
