@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from "../assets/svgs/inboxcleanup.svg"
+import Faqs from '../components/Faqs';
 
 const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -17,7 +18,10 @@ const Home = () => {
       <p className={`text-center text-2xl text-gray-600 max-w-2xl mx-auto font-normal py-[40px] ${isDarkMode ? ' text-slate-400' : ' text-gray-600'}`}>Effortless Email Integration: Seamlessly Send and Receive mails with MailMagnet. Elevate your messaging experience for unparalleled communication efficiency.</p>
       <img className='w-[300px] mx-auto my-7' src={Hero} alt="Hero Image" />
       </div>
+      <Faqs/>
     </div>
+
+
   );
 }
 
