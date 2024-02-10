@@ -11,7 +11,7 @@ const Home = () => {
   };
 
   return (
-    <div className={`w-100 h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
+    <div className={`w-100 h-[110vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
       <Navbar isDarkMode={isDarkMode} onSwitchChange={handleSwitchChange} />
       <div className='w-100 h-100 flex-col items-center justify-between  px-[50px] py-[100px]'>
       <h1 className='text-center text-6xl font-bold'>Make <span className='text-cyan-500 mail'>@mails</span> our problem. Not yours.</h1>
