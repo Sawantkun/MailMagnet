@@ -17,11 +17,14 @@ const navigate = useNavigate();
   const handleLogin = () => {
     navigate('/Login')
   }
+  const handleHome = () => {
+    navigate('/')
+  }
 
   return (
     <nav>
       <div className={`flex items-center justify-between w-100 px-[50px] py-6 ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
-        <span className={`font-extrabold text-3xl`}>@MailMagnet</span>
+        <span className={`font-extrabold text-3xl cursor-pointer`} onClick={handleHome}>@MailMagnet</span>
         <div className='w-[350px] flex items-center justify-between'>
           <Switch size='lg' colorScheme='bg-cyan-500' onChange={handleSwitchChange} />
           <button className='font-bold text-xl' onClick={handleLogin}>Sign In</button>
