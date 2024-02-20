@@ -39,9 +39,10 @@ const Login = () => {
                         </InputGroup>
                         
                     </Stack>
-                <div className='text-center mt-9'>
-                    <button className="font-bold text-white text-xl bg-cyan-500 px-7 py-2 rounded-full">Save</button>
-                </div>
+                    <div className='w-100 text-center mt-5 cursor-pointer opacity-50 hover:opacity-100 transition-all'>Forgot Password?</div>
+                    <div className='text-center mt-5'>
+                                <button className={`font-bold text-md bg-cyan-500 px-5 py-1 rounded-full ${isDarkMode ? ' text-black' : 'text-white'}`}>Log In</button>
+                    </div>
             </div>
         </div>
     </div>
