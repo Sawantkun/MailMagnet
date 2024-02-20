@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { Button, Card, CardBody, Image, Input, InputGroup, InputRightElement, Stack } from "@chakra-ui/react";
 import Hero from "../assets/svgs/signup.svg"
 import { HiEye, HiEyeOff } from 'react-icons/hi'; // Import eye icons from react-icons library
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [show, setShow] = useState(false);
@@ -16,6 +17,10 @@ const SignUp = () => {
     const handleSwitchChange = () => {
       setIsDarkMode(!isDarkMode);
     };
+    const navigate = useNavigate();
+    const handleDashboard = () => {
+      navigate('/dashboard')
+    }
 
     return (
         <div className={`w-100 h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
@@ -56,7 +61,7 @@ const SignUp = () => {
                     </Stack>
                     <div className='w-100 text-center mt-5 cursor-pointer opacity-50 hover:opacity-100 transition-all'>Forgot Password?</div>
                         <div className='text-center mt-5'>
-                                <button className={`font-bold text-md bg-cyan-500 px-5 py-1 rounded-full ${isDarkMode ? ' text-black' : 'text-white'}`}>Create</button>
+                                <button className={`font-bold text-md bg-cyan-500 px-5 py-1 rounded-full ${isDarkMode ? ' text-black' : 'text-white'}`} onClick={handleDashboard}>Create</button>
                         </div>
                     </div>
             <img src={Hero} className='w-[400px]  mx-auto my-7' alt="Hero Image" />
