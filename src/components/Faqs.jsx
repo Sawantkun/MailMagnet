@@ -11,7 +11,7 @@ const Faqs = ({ isDarkMode, onSwitchChange }) => {
   };
   return (
    <div className={`${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
-     <div className='w-3/5 mx-auto h-[100vh] pt-10'>
+     <div className='w-3/5 mx-auto h-100 pt-10'>
       <p className='text-base mb-4 text-center text-cyan-500 pb-5'>Navigate with Ease, Explore with Confidence: Your FAQs, Unveiled.</p>
       <h1 className='text-6xl font-bold mb-4 text-center pb-20'>FAQ's</h1>
     <div className='pb-20'>
