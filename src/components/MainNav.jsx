@@ -32,9 +32,9 @@ const MainNav = ({ isDarkMode, onSwitchChange }) => {
   };
 
   return (
-    <nav className={`flex justify-between w-full h-16 px-[40px] py-[40px] text-xl ${isDarkMode ? 'bg-white text-black' : 'bg-[#0B1623] text-white'}`}>
+    <nav className={`flex justify-between w-full h-16 pr-[40px] py-[40px] text-xl ${isDarkMode ? 'bg-white text-black' : ' bg-[#152840] text-white'}`}>
       <div className="flex items-center justify-between w-[650px]">
-        <span className='text-3xl font-bold'>@MailMagnet</span>
+        <div className={`text-3xl font-bold py-[22px] px-[50px] ${isDarkMode ? 'bg-white text-black' : 'bg-[#0B1623] text-white'}`}>@MailMagnet</div>
         <span className="font-semibold">QUOTA REMAINING: 200 EMAILS</span>
       </div>
       <div className="flex items-center font-semibold justify-between w-[400px]">

@@ -17,35 +17,35 @@ const CustomSidebar = ({ isDarkMode, onSwitchChange }) => {
   };
 
   return (
-    <div className={`w-[300px] h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
+    <div className={`border border-end w-[300px] h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
       <ul className=' pt-[20px]'>
-        <li className={`flex items-center py-6 px-[18px] text-2xl ${activeItem === 0 ? 'bg-gray-200' : ''}`}>
+        <li className={`flex items-center py-6 px-[18px] text-xl ${activeItem === 0 ? 'bg-gray-200' : ''}`}>
           <chakra.a
             href="#"
             onClick={() => handleItemClick(0)}
-            color={activeItem === 0 ? 'cyan.500' : 'inherit'} 
+            color={activeItem === 0 ? 'cyan.800' : 'inherit'} 
           >
-            <Icon as={FaEnvelope} boxSize={6} color={activeItem === 0 ? 'cyan.500' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaEnvelope} boxSize={6} color={activeItem === 0 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
             Email Services
           </chakra.a>
         </li>
-        <li className={`flex items-center py-6 px-[18px] text-2xl ${activeItem === 1 ? 'bg-gray-200' : ''}`}>
+        <li className={`flex items-center py-6 px-[18px] text-xl ${activeItem === 1 ? 'bg-gray-200' : ''}`}>
           <chakra.a
             href="#"
             onClick={() => handleItemClick(1)}
-            color={activeItem === 1 ? 'cyan.500' : 'inherit'} 
+            color={activeItem === 1 ? 'cyan.800' : 'inherit'} 
           >
-            <Icon as={FaFileAlt} boxSize={6} color={activeItem === 1 ? 'cyan.500' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaFileAlt} boxSize={6} color={activeItem === 1 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
             Email Templates
           </chakra.a>
         </li>
-        <li className={`flex items-center py-6 px-[18px] text-2xl ${activeItem === 2 ? 'bg-gray-200' : ''}`}>
+        <li className={`flex items-center py-6 px-[18px] text-xl ${activeItem === 2 ? 'bg-gray-200' : ''}`}>
           <chakra.a
             href="#"
             onClick={() => handleItemClick(2)}
-            color={activeItem === 2 ? 'cyan.500' : 'inherit'} 
+            color={activeItem === 2 ? 'cyan.800' : 'inherit'} 
           >
-            <Icon as={FaUser} boxSize={6} color={activeItem === 2 ? 'cyan.500' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaUser} boxSize={6} color={activeItem === 2 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
             Personal Settings
           </chakra.a>
         </li>
