@@ -10,7 +10,7 @@ import {
   ModalCloseButton,
 } from '@chakra-ui/react';
 import { Switch, useColorMode, Badge } from '@chakra-ui/react';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const MainNav = ({ isDarkMode, onSwitchChange }) => {
@@ -30,11 +30,16 @@ const MainNav = ({ isDarkMode, onSwitchChange }) => {
     onSwitchChange();
     toggleColorMode();
   };
+  const navigate = useNavigate();
+  const handleHome = () => {
+    navigate('/')
+  }
+
 
   return (
     <nav className={`flex justify-between w-full h-16 pr-[40px] py-[40px] text-xl ${isDarkMode ? 'bg-white text-black' : ' bg-[#152840] text-white'}`}>
       <div className="flex items-center justify-between w-[650px]">
-        <div className={`text-3xl font-bold py-[22px] px-[50px] ${isDarkMode ? 'bg-white text-black' : 'bg-[#0B1623] text-white'}`}>@MailMagnet</div>
+        <div className={`cursor-pointer text-3xl font-bold py-[22px] px-[50px] ${isDarkMode ? 'bg-white text-black' : 'bg-[#0B1623] text-white'}`} onClick={handleHome}>@MailMagnet</div>
         <span className="font-semibold">QUOTA REMAINING: 200 EMAILS</span>
       </div>
       <div className="flex items-center font-semibold justify-between w-[400px]">
