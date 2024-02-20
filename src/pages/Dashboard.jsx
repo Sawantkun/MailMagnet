@@ -1,9 +1,15 @@
-import React from 'react'
+// Dashboard.js
+import React from 'react';
+import MainNav from '../components/MainNav';
+import SideBar from '../components/SideBar';
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
+    <div>
+      <MainNav/>
+      <SideBar/>
+    </div>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
