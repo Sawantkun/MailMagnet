@@ -67,8 +67,11 @@ const Services = () => {
     });
     setshowModal('Form');
   };
+  const handleCopyClick = (index) => {
+    navigator.clipboard.writeText(services[index].serviceId);
+    setCopiedServiceId(services[index].serviceId);
+  };
   
-
   return (
     <div className='m-5 w-full'>
       <div className='my-5'>
@@ -79,27 +82,11 @@ const Services = () => {
           Add New Service
         </Button>
       </div>
+      <div className='flex flex-col gap-4'>
+      {services.map((data,index) => (
       <Card>
         <CardBody className='flex flex-col gap-5'>
-        <div className=' grid-cols-3 gap-4 flex justify-between'>
-              <div className='flex items-center gap-4 col-span-1'>
-                <Button colorScheme='blue'>Email</Button>
-                <div>
-                  <h5>Name</h5>
-                  <p>Service ID: kwjdibk</p>
-                </div>
-              </div>
-              <div className='col-span-1'>
-                <Badge>Default</Badge>
-              </div>
-              <div className='flex items-center gap-3'>
-    <DeleteIcon />
-    <EditIcon />
-    <CopyIcon />
-</div>
-
-            </div>
-            {services.map((data,index) => (
+            
             <div key={data.serviceId} className='flex justify-between'>
               <div className='flex items-center gap-4'>
                 <Button colorScheme='blue'>Email</Button>
@@ -117,14 +104,16 @@ const Services = () => {
                 
 <Tooltip label={`Copy Service ID: ${copiedServiceId}`} isOpen={copiedServiceId} fontSize='md' >
 
-<CopyIcon onClick={() => setCopiedServiceId(data.serviceId)} />
+<CopyIcon onClick={() => handleCopyClick(index)} />
 </Tooltip>
               </div>
             </div>
             
-            ))}
+           
         </CardBody>
-
+        </Card>
+        ))}
+        </div>
         <Modal isOpen={showModal} size={'xl'} onClose={() => setshowModal(false)}>
           <ModalOverlay />
           <ModalContent>
@@ -196,7 +185,7 @@ const Services = () => {
             </ModalFooter>
           </ModalContent>
         </Modal>
-      </Card>
+      
     </div>
   );
 };
