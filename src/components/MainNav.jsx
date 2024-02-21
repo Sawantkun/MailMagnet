@@ -1,12 +1,12 @@
 // MainNav.js
 import React, { useState } from 'react';
 import {
-  Button,
   Modal,
   ModalOverlay,
   ModalHeader,
   ModalContent,
   ModalBody,
+  ModalFooter,
   ModalCloseButton,
 } from '@chakra-ui/react';
 import { Switch, useColorMode, Badge } from '@chakra-ui/react';
@@ -34,6 +34,9 @@ const MainNav = ({ isDarkMode, onSwitchChange }) => {
   const handleHome = () => {
     navigate('/')
   }
+  const handleLogIn = () => {
+    navigate('/Login')
+  }
 
 
   return (
@@ -50,7 +53,7 @@ const MainNav = ({ isDarkMode, onSwitchChange }) => {
         <span>Welcome, user</span>
         </div>
         <span >Support</span>
-        <span>Sign Out</span>
+        <span className='cursor-pointer' onClick={handleLogIn}>Sign Out</span>
         <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
           <ModalOverlay />
           <ModalContent>
@@ -58,29 +61,31 @@ const MainNav = ({ isDarkMode, onSwitchChange }) => {
               Updates
             </ModalHeader>
             <ModalCloseButton />
-            <ModalBody className="border-l-cyan-500 border-l-4">
+            <ModalBody className="border-l-cyan-500 border-l-4 ">
               <ol className="list-decimal">
                 <li className='m-2 p-1'> 
                   <Badge variant='solid' colorScheme='green'>
                    New
                   </Badge>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur blanditiis quos veniam perspiciatis ea.
+                      &nbsp; Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur blanditiis quos veniam perspiciatis ea.
                 </li>
                 <li className='m-2 p-1'> 
                   <Badge variant='subtle' colorScheme='purple'>
                     Improved
                   </Badge>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur blanditiis quos veniam perspiciatis ea.
+                    &nbsp; Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur blanditiis quos veniam perspiciatis ea.
                 </li>
                 <li className='m-2 p-1'> 
                   <Badge variant='outline' colorScheme='red'>
                     Removed
                   </Badge>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur blanditiis quos veniam perspiciatis ea.
+                    &nbsp; Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et consectetur blanditiis quos veniam perspiciatis ea.
                 </li>
-                
               </ol>
             </ModalBody>
+            <ModalFooter>
+              <p className='w-full border-t-2 border-t-cyan-500 px-auto text-center py-2'>MailMagnet News</p>
+            </ModalFooter>
           </ModalContent>
         </Modal>
       </div>
