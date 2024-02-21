@@ -17,7 +17,7 @@ const CustomSidebar = ({ isDarkMode, onSwitchChange }) => {
   };
 
   return (
-    <div className={`border w-3/12 border-end h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
+    <div className={`border w-[387px] border-end h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
       <ul className=' pt-[20px]'>
         <li className={`flex items-center py-6 px-[18px] text-xl ${activeItem === 0 ? 'bg-gray-200' : ''}`}>
           <chakra.a

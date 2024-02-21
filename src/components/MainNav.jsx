@@ -41,7 +41,7 @@ const MainNav = ({ isDarkMode, onSwitchChange }) => {
       </div>
       <div className="flex items-center font-semibold justify-between w-[400px]">
         <div>
-          <sup onClick={handleOpenModal} className='px-2 text-white cursor-pointer rounded-full bg-gray-500'>
+          <sup onClick={handleOpenModal} className='px-2 mx-2 text-white cursor-pointer rounded-full bg-gray-500'>
           1
         </sup>
         <span>Welcome, user</span>

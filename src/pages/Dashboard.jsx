@@ -10,7 +10,7 @@ const Dashboard = () => {
       <MainNav/>
       <div className='flex w-full'>
       <SideBar/>
-    <Services/>
+      <Services/>
       </div>
     </div>
   );
