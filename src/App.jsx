@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import MainNav from './components/MainNav';
+import Services from './pages/Services';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/SignUp' element={<SignUp />} />
           <Route path='/Dashboard' element={<Dashboard />} />
           <Route path='/MainNav' element={<MainNav />} />
+          <Route path='/Services' element={<Services />} />
         </Routes>
       </Router>
     </ChakraProvider>
