@@ -23,9 +23,9 @@ const CustomSidebar = ({ isDarkMode, onSwitchChange }) => {
           <chakra.a
             href="#"
             onClick={() => handleItemClick(0)}
-            color={activeItem === 0 ? 'cyan.800' : 'inherit'} 
+            color={activeItem === 0 ? '#152840' : 'inherit'} 
           >
-            <Icon as={FaEnvelope} boxSize={6} color={activeItem === 0 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaEnvelope} boxSize={6} color={activeItem === 0 ? '#152840' : 'inherit'} className='mx-4'></Icon>
             Email Services
           </chakra.a>
         </li>
@@ -33,9 +33,9 @@ const CustomSidebar = ({ isDarkMode, onSwitchChange }) => {
           <chakra.a
             href="#"
             onClick={() => handleItemClick(1)}
-            color={activeItem === 1 ? 'cyan.800' : 'inherit'} 
+            color={activeItem === 1 ? '#152840' : 'inherit'} 
           >
-            <Icon as={FaFileAlt} boxSize={6} color={activeItem === 1 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaFileAlt} boxSize={6} color={activeItem === 1 ? '#152840' : 'inherit'} className='mx-4'></Icon>
             Email Templates
           </chakra.a>
         </li>
@@ -43,9 +43,9 @@ const CustomSidebar = ({ isDarkMode, onSwitchChange }) => {
           <chakra.a
             href="#"
             onClick={() => handleItemClick(2)}
-            color={activeItem === 2 ? 'cyan.800' : 'inherit'} 
+            color={activeItem === 2 ? '#152840' : 'inherit'} 
           >
-            <Icon as={FaUser} boxSize={6} color={activeItem === 2 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaUser} boxSize={6} color={activeItem === 2 ? '#152840' : 'inherit'} className='mx-4'></Icon>
             Personal Settings
           </chakra.a>
         </li>
