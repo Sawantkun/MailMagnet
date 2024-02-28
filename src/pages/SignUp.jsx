@@ -14,9 +14,6 @@ const SignUp = () => {
 
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-    const handleSwitchChange = () => {
-      setIsDarkMode(!isDarkMode);
-    };
     const navigate = useNavigate();
     const handleDashboard = () => {
       navigate('/dashboard')
@@ -24,7 +21,7 @@ const SignUp = () => {
 
     return (
         <div className={`w-100 h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
-            <Navbar isDarkMode={isDarkMode} onSwitchChange={handleSwitchChange} />
+            <Navbar isDarkMode={isDarkMode} onSwitchChange={() => setIsDarkMode(false)} />
             <div className="w-9/12 h-100 px-[50px] mt-[50px] py-[100px] mx-auto flex items-center justify-between border rounded">
                 <div>
                     <h1 className='text-center text-3xl font-bold mb-9'>Let's Get Started</h1>
@@ -41,7 +38,7 @@ const SignUp = () => {
                                 placeholder='Enter password'
                             />
                             <InputRightElement width='4.5rem'>
-                                <Button h='1.75rem' className='opacity-50' size='sm' onClick={handleClick}>
+                                <Button h='1.75rem' className='opacity-50' size='sm' onClick={() => setShow(true)}>
                                     {show ? <HiEyeOff /> : <HiEye />} 
                                 </Button>
                             </InputRightElement>
@@ -53,7 +50,7 @@ const SignUp = () => {
                                 placeholder='Enter Confirm password'
                             />
                             <InputRightElement width='4.5rem'>
-                                <Button h='1.75rem' className='opacity-50' size='sm' onClick={handleClicks}>
+                                <Button h='1.75rem' className='opacity-50' size='sm' onClick={() => setShows(tru)}>
                                     {shows ? <HiEyeOff /> : <HiEye />} 
                                 </Button>
                             </InputRightElement>
