@@ -10,22 +10,25 @@ const Setting = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);    
     return(
         <div className="w-full p-3 flex flex-col gap-4 ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}">
-        <h2 className="text-2xl"><b>Personal Settings</b></h2>
+
         <Card>
             <CardBody className="flex flex-col gap-3">
+                <div>
                 <h2 className="text-xl"><b>Contact Details</b></h2>
                 <label>
-                    Name
+                    <div className="flex flex-row gap-3 items-center my-3">
                     <Input type="text" name="name" id="name" placeholder="Enter Your Name" autoComplete='off'/>
+                    <Button colorScheme="blue" className="w-20 ">Update</Button>
+                    </div>
                 </label>
-                <Button colorScheme="blue" className="w-20 ">Update</Button>
+                </div>
+                
             </CardBody>
         </Card>
         <Card>
             <CardBody className="flex flex-col gap-3">
                 <h2 className="text-xl"><b>Password</b></h2>
                 <label>
-                    New Password
                     <InputGroup size='md'>
                         <Input
                             pr='4.5rem'
@@ -40,12 +43,11 @@ const Setting = () => {
                     </InputGroup>
                 </label>
                 <label>
-                    Confirm Password
                     <InputGroup size='md'>
                         <Input
                             pr='4.5rem'
                             type={shows ? 'text' : 'password'}
-                            placeholder='Enter password'
+                            placeholder='Enter Confirm password'
                         />
                         <InputRightElement width='4.5rem'>
                             <Button h='1.75rem' className='opacity-50' size='sm' onClick={() => setShows(!shows)}>
@@ -53,6 +55,7 @@ const Setting = () => {
                             </Button>
                         </InputRightElement>
                     </InputGroup>
+                    
                 </label>
                 <Button colorScheme="blue" className="w-20">Update</Button>
             </CardBody>

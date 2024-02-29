@@ -19,7 +19,7 @@ const Dashboard = () => {
       <div className='w-1/5'>
       <SideBar onMenuItemClick={handleMenuItemClick} />
       </div>
-      <div className='flex-grow'>
+      <div className='w-4/5 '>
         {currentPage === 0 && <Services />}
         {currentPage === 1 && <EmailTemplates />}
         {currentPage === 2 && <Setting />}
