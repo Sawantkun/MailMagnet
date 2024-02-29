@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import MainNav from '../components/MainNav';
 import SideBar from '../components/SideBar';
 import Services from './Services';
+import Templates from './Templates';
 import Settings from './Setting';
 
 const Dashboard = () => {
@@ -13,8 +14,9 @@ const Dashboard = () => {
       <MainNav/>
       <div className='flex w-full'>
       <SideBar/>
-      <Services/>
-      {/* <Settings/> */}
+      {/* <Services/> */}
+      {/* <Templates/> */}
+      <Settings/>
       </div>
     </div>
   );

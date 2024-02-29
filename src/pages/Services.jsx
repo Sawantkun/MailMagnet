@@ -230,11 +230,11 @@ const Services = () => {
                 </Alert>
                 <div className='flex items-center gap-2 '>
                   {connectedAccount ? (
-                    <Button bg='#E53E3E' colorScheme='red' onClick={handleDisconnectAccount}>
+                    <Button bg='#E53E3E' size='sm' className='my-2' colorScheme='red' onClick={handleDisconnectAccount}>
                       Disconnect Account
                     </Button>
                   ):(
-                    <Button colorScheme='blue' onClick={handleConnectAccount}>
+                    <Button colorScheme='blue'  size='sm' className='my-2'  onClick={handleConnectAccount}>
                       Connect Account
                     </Button>
                     
