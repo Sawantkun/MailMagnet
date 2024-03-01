@@ -17,15 +17,15 @@ const CustomSidebar = ({ isDarkMode, onSwitchChange }) => {
   };
 
   return (
-    <div className={`border w-[387px] border-end h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
+    <div className={`border w-[387px] border-end ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
       <ul className=' pt-[20px]'>
         <li className={`flex items-center py-6 px-[18px] text-xl ${activeItem === 0 ? 'bg-gray-200' : ''}`}>
           <chakra.a
             href="#"
             onClick={() => handleItemClick(0)}
-            color={activeItem === 0 ? 'cyan.800' : 'inherit'} 
+            color={activeItem === 0 ? '#152840' : 'inherit'} 
           >
-            <Icon as={FaEnvelope} boxSize={6} color={activeItem === 0 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaEnvelope} boxSize={6} color={activeItem === 0 ? '#152840' : 'inherit'} className='mx-4'></Icon>
             Email Services
           </chakra.a>
         </li>
@@ -33,9 +33,9 @@ const CustomSidebar = ({ isDarkMode, onSwitchChange }) => {
           <chakra.a
             href="#"
             onClick={() => handleItemClick(1)}
-            color={activeItem === 1 ? 'cyan.800' : 'inherit'} 
+            color={activeItem === 1 ? '#152840' : 'inherit'} 
           >
-            <Icon as={FaFileAlt} boxSize={6} color={activeItem === 1 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaFileAlt} boxSize={6} color={activeItem === 1 ? '#152840' : 'inherit'} className='mx-4'></Icon>
             Email Templates
           </chakra.a>
         </li>
@@ -43,9 +43,9 @@ const CustomSidebar = ({ isDarkMode, onSwitchChange }) => {
           <chakra.a
             href="#"
             onClick={() => handleItemClick(2)}
-            color={activeItem === 2 ? 'cyan.800' : 'inherit'} 
+            color={activeItem === 2 ? '#152840' : 'inherit'} 
           >
-            <Icon as={FaUser} boxSize={6} color={activeItem === 2 ? 'cyan.800' : 'inherit'} className='mx-4'></Icon>
+            <Icon as={FaUser} boxSize={6} color={activeItem === 2 ? '#152840' : 'inherit'} className='mx-4'></Icon>
             Personal Settings
           </chakra.a>
         </li>

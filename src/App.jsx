@@ -9,7 +9,6 @@ import Dashboard from './pages/Dashboard';
 import MainNav from './components/MainNav';
 import Services from './pages/Services';
 import ForgotPassword from './pages/ForgotPassword';
-
 const App = () => {
   return (
     <ChakraProvider>
@@ -19,8 +18,6 @@ const App = () => {
           <Route path='/Login' element={<Login />} />
           <Route path='/SignUp' element={<SignUp />} />
           <Route path='/Dashboard' element={<Dashboard />} />
-          <Route path='/MainNav' element={<MainNav />} />
-          <Route path='/Services' element={<Services />} />
           <Route path='/ForgotPassword' element={<ForgotPassword />} />
         </Routes>
       </Router>
