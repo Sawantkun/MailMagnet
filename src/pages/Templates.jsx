@@ -106,10 +106,10 @@ const Templates = () => {
       <div className='my-2 flex w-full justify-between items-center p-3 border-b-2'>
         <h2 className='text-2xl mb-2'>
         {Templates.length === 0 ? (
-         <p>Email Templates</p>
+         <p className='font-bold text-3xl'>Email Templates</p>
          ) : (
            <div className='flex flex-col gap-4'>
-         <p>My Default Template</p>
+         <p className='font-bold text-3xl'>My Default Template</p>
         </div>
       )}
         </h2>

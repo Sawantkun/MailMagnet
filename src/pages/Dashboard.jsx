@@ -15,8 +15,8 @@ const Dashboard = () => {
       <div className='flex w-full'>
       <SideBar/>
       {/* <Services/> */}
-      {/* <Templates/> */}
-      <Settings/>
+      <Templates/>
+      {/* <Settings/> */}
       </div>
     </div>
   );
