@@ -14,6 +14,8 @@ import {
   StepStatus,
   Input,
   Button,
+  useSteps ,
+  StepTitle ,
 } from '@chakra-ui/react';
 
 const steps = [
@@ -23,8 +25,11 @@ const steps = [
 ];
 
 function ForgotPassword() {
-  const [activeStep, setActiveStep] = useState(0);
-  const [completedSteps, setCompletedSteps] = useState([]);
+  const { activeStep, setActiveStep } = useSteps({
+    index: 1,
+    count: steps.length,
+  })
+    const [completedSteps, setCompletedSteps] = useState([]);
   const inputRefs = useRef([]);
   const [otp, setOtp] = useState(['', '', '', '']);
 
@@ -51,31 +56,33 @@ function ForgotPassword() {
     } else {
       console.error('Invalid OTP');
     }
+    setCompletedSteps([1]);
+    setActiveStep(2);
   };
 
   return (
-    <Box>
-      <Box className="fixed left-1/2 transform -translate-x-1/2 ">
-        <Stepper className='p-5 w-[900px]' size="md" colorScheme='cyan' activeStep={activeStep}>
-          {steps.map((step, index) => (
-            <Step key={index} onClick={() => setActiveStep(index)} completed={completedSteps.includes(index)}>
-              <StepIndicator>
-                <StepStatus
-                  complete={<StepIcon />}
-                  incomplete={<StepNumber />}
-                  active={<StepNumber />}
-                />
-              </StepIndicator>
-              <Box flexShrink="0">
-                <Text fontSize="lg" fontWeight="bold" mb="1">
-                  {step.title}
-                </Text>
-                <StepDescription>{step.description}</StepDescription>
-              </Box>
-              <StepSeparator />
-            </Step>
-          ))}
-        </Stepper>
+    <div className='mt-[50px] w-full'>
+      <Box className='w-[700px] mx-auto' >
+      <Stepper size='lg' index={activeStep} colorScheme='facebook'>
+      {steps.map((step, index) => (
+        <Step key={index} onClick={() => setActiveStep(index)} className='cursor-pointer'>
+          <StepIndicator>
+            <StepStatus
+              complete={<StepIcon />}
+              incomplete={<StepNumber />}
+              active={<StepNumber />}
+            />
+          </StepIndicator>
+
+          <Box flexShrink='0'>
+            <StepTitle>{step.title}</StepTitle>
+            <StepDescription>{step.description}</StepDescription>
+          </Box>
+
+          <StepSeparator />
+        </Step>
+      ))}
+    </Stepper>
       </Box>
 
       {activeStep === 0 && (
@@ -89,12 +96,8 @@ function ForgotPassword() {
             className="w-full px-4 py-2 mb-4 border border-gray-300 rounded focus:outline-none"
           />
           <Box className="w-full flex justify-center">
-            <Button
-              className="bg-[#152840] text-white m-4 px-6 py-3 rounded cursor-pointer"
-              onClick={handleGenerateOtp}
-            >
-              Generate OTP
-            </Button>
+          <Button colorScheme='facebook' className='mt-5' onClick={handleGenerateOtp}>Generate OTP</Button>
+
           </Box>
           <Box className="w-full text-center m-4">
             <Box className='flex items-center mb-6'>
@@ -108,9 +111,10 @@ function ForgotPassword() {
       )}
 
       {activeStep === 1 && (
-        <Box className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md shadow-md max-w-md w-full p-8 flex flex-col items-center">          <Text className="text-2xl font-bold mb-4">Enter OTP</Text>
+        <Box className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md shadow-md max-w-md w-full p-8 flex flex-col items-center">          
+          <Text className="text-2xl font-bold mb-4">Enter OTP</Text>
           <Text className="mb-6 text-[#3e6492]">Please enter the OTP sent to your email.</Text>
-          <Box className="flex justify-center">
+          <Box className="flex justify-center w-[250px]">
             {otp.map((value, index) => (
               <Input
                 key={index}
@@ -124,12 +128,8 @@ function ForgotPassword() {
             ))}
           </Box>
           <Box className="w-full flex justify-center mt-6">
-            <Button
-              onClick={handleOtpSubmit}
-              className="bg-[#152840] text-white px-6 py-3 rounded cursor-pointer"
-            >
-              Submit
-            </Button>
+          <Button colorScheme='facebook' className='mt-5' onClick={handleOtpSubmit}>Submit</Button>
+
           </Box>
         </Box>
       )}
@@ -149,16 +149,12 @@ function ForgotPassword() {
             className="w-full px-4 py-2 mb-4 border border-gray-300 rounded focus:outline-none"
           />
           <Box className="w-full flex justify-center">
-            <Button
-              // Add your reset password logic here
-              className="bg-[#152840] text-white px-6 py-3 rounded cursor-pointer mb-4"
-            >
-              Reset Password
-            </Button>
+          <Button colorScheme='facebook' className='mt-5' onClick={handleOtpSubmit}>Reset Password</Button>
+
           </Box>
         </Box>
       )}
-    </Box>
+    </div>
   );
 }
 

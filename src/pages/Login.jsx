@@ -20,6 +20,9 @@ const Login = () => {
     const handleDashboard = () => {
       navigate('/dashboard')
     }
+    const handlePassword = () => {
+      navigate('/ForgotPassword')
+    }
     return(
         <div className={`w-100 h-[100vh] ${isDarkMode ? 'bg-[#0B1623] text-white' : 'bg-white text-black'}`}>
         <Navbar isDarkMode={isDarkMode} onSwitchChange={handleSwitchChange}/>
@@ -43,7 +46,7 @@ const Login = () => {
                         </InputGroup>
                         
                     </Stack>
-                    <div className='w-100 text-center mt-5 cursor-pointer opacity-50 hover:opacity-100 transition-all'>Forgot Password?</div>
+                    <div className='w-100 text-center mt-5 cursor-pointer opacity-50 hover:opacity-100 transition-all' onClick={handlePassword}>Forgot Password?</div>
                     <div className='text-center mt-5'>
                         <button className={`font-bold text-md bg-cyan-500 px-5 py-1 rounded-full ${isDarkMode ? ' text-black' : 'text-white'}`} onClick={handleDashboard}>Log In</button>
                     </div>
